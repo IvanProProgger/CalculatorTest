@@ -7,5 +7,5 @@ def test_display(driver):
 def test_initialize(driver):
     driver.find_element_by_name("Очистить").click()
     driver.find_element_by_name("Семь").click()
-    assert(test_display(driver), "7")
+    assert test_display(driver) == "7", "ошибка"
     driver.find_element_by_name("Очистить").click()

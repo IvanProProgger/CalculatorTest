@@ -2,8 +2,10 @@ import pytest
 from appium import webdriver
 
 
-desired_caps = {}
-desired_caps["app"] = "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App"
+desired_caps = {
+    "app": "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App"
+}
+
 
 @pytest.fixture(scope="function")
 def driver():
@@ -13,7 +15,5 @@ def driver():
     )
     yield driver
     driver.quit()
-
-
 
 

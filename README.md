@@ -3,16 +3,17 @@
 Необходимое ПО:
 1. Windows Application Driver
 2. IDE with python interpreter (pycharm or other)
-
+3. Установите python3 
 
 Для подготоки к запуску необходимо выполнить следующие шаги:
-1. git clone https://github.com/IvanProProgger/CalculatorTest.git
-2. python.exe -m pip install --upgrade pip
-3. pip install Appium-Python-Client==1.3.0
-4. pip install unidecode
-5. pip install pytest
-6. pip uninstall urllib3
-7. pip install urllib3==1.26.16
+1. создайте новый проект, выберите interpreter python3 
+2. git clone https://github.com/IvanProProgger/CalculatorTest.git
+3. python.exe -m pip install --upgrade pip
+4. pip install Appium-Python-Client==1.3.0
+5. pip install unidecode
+6. pip install pytest
+7. pip uninstall urllib3
+8. pip install urllib3==1.26.16
 
 Для запуска:
 1. Включите режим разработчика в Windows:

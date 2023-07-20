@@ -2,11 +2,12 @@
 
 Необходимое ПО:
 1. Windows Application Driver
-2. IDE with python interpreter (pycharm or other)
-3. Установите python3 
+2. Python3
+2. IDE with python3 interpreter (pycharm или другой)
+ 
 
 Для подготоки к запуску необходимо выполнить следующие шаги:
-1. создайте новый проект, выберите interpreter python3 
+1. создайте новый проект, выберите interpreter => python3 
 2. git clone https://github.com/IvanProProgger/CalculatorTest.git
 3. python.exe -m pip install --upgrade pip
 4. pip install Appium-Python-Client==1.3.0

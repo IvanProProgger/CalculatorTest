@@ -56,4 +56,7 @@ class BasePage:
         num = find_display_text.split()[2]
         return num
 
+    def assert_for_default_display_text(self):
+        assert self.display_text() == "0", "Ошибка, дефолтный текст на дисплее не соответствует"
+
 

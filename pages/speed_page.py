@@ -1,4 +1,5 @@
 from .base_page import BasePage
+from .locators import AssertConstant
 
 
 class SpeedPage(BasePage):
@@ -11,4 +12,5 @@ class SpeedPage(BasePage):
         self.driver.find_element_by_accessibility_id("Units2").click()
         self.driver.find_element_by_name("миль в час").click()
 
-
+    def assert_for_correct_output(self):
+        assert self.value_output() == AssertConstant.seven_km_hour_into_mile_hour

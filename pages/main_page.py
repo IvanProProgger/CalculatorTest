@@ -20,5 +20,3 @@ class MainPage(BasePage):
     def go_to_speed_page(self):
         self.driver.find_element_by_name("Открыть навигацию").click()
         self.driver.find_element_by_name("Скорость Преобразователь").click()
-
-

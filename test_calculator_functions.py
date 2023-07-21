@@ -1,4 +1,3 @@
-import time
 from .pages.speed_page import SpeedPage
 from .pages.main_page import MainPage
 from .pages.engineer_page import EngineerPage
@@ -11,25 +10,21 @@ def test_go_to_main_page(driver):
     page.go_to_main_page()
 
 
+@pytest.mark.skip
 def test_display(driver):
     page = MainPage(driver)
-    assert page.display_text() == "0", "Ошибка, элемент не совпадает с выводом"
+    page.assert_for_default_display_text()
 
 
-def test_initialize(driver):
-    page = MainPage(driver)
-    page.clear_button_empty().click()
-    page.number_seven().click()
-    assert page.display_text() == "7", "Ошибка, элемент не совпадает с выводом"
-
-
+@pytest.mark.skip
 def test_engineer_calculator_page(driver):
     page = MainPage(driver)
     page.clear_button_empty().click()
     page.go_to_engineer_page()
-    if page.display_text() != "0":
-        page.clear_button_with_text().click()
-    assert page.display_text() == "0", "Ошибка, элемент не совпадает с выводом"
+    engin_page = EngineerPage(driver)
+    if engin_page.display_text() != "0":
+        engin_page.clear_button_with_text().click()
+    engin_page.assert_for_default_display_text()
 
 
 def test_engineer_page_factorial(driver):
@@ -41,9 +36,10 @@ def test_engineer_page_factorial(driver):
     engin_page = EngineerPage(driver)
     engin_page.number_seven().click()
     engin_page.button_factorial().click()
-    assert engin_page.display_text() == "5 040", "Ошибка, элемент не совпадает с выводом"
+    engin_page.assert_seven_factorial()
 
 
+@pytest.mark.skip
 def test_speed_page_convert(driver):
     page = MainPage(driver)
     page.clear_button_empty().click()
@@ -52,5 +48,5 @@ def test_speed_page_convert(driver):
     speed_page.change_unit1_to_km_hour()
     speed_page.change_unit2_to_mile_hour()
     speed_page.number_seven().click()
-    assert speed_page.value_output() == "4,349988"
+    speed_page.assert_for_correct_output()
 

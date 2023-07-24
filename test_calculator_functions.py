@@ -10,13 +10,11 @@ def test_go_to_main_page(driver):
     page.go_to_main_page()
 
 
-@pytest.mark.skip
 def test_display(driver):
     page = MainPage(driver)
     page.assert_for_default_display_text()
 
 
-@pytest.mark.skip
 def test_engineer_calculator_page(driver):
     page = MainPage(driver)
     page.clear_button_empty().click()
@@ -39,7 +37,6 @@ def test_engineer_page_factorial(driver):
     engin_page.assert_seven_factorial()
 
 
-@pytest.mark.skip
 def test_speed_page_convert(driver):
     page = MainPage(driver)
     page.clear_button_empty().click()

@@ -29,10 +29,11 @@
 - Профиль -> Выберите все
 - Выберите имя (например: "WinAppDriver remote")
 Также для идентичного результата вы можете ввести в командой строке:
-- netsh advfirewall firewall add rule name="WinAppDriver remote" dir=in action=allow protocol=TCP localport=4723
+netsh advfirewall firewall add rule name="WinAppDriver remote" dir=in action=allow protocol=TCP localport=4723
 2. В командной строке введите: ipconfig
 - Вам нужен IPv4 Address используемого подключения, запомните его
-3. - Запустите командную строку от имени Администратора
+3. Для запуска сервера:
+- Запустите командную строку от имени Администратора
 - cd C:\Program Files (x86)\Windows Application Driver\ (дефолтный путь)
 - WinAppDriver.exe "IPv4 Address" 4723/wd/hub (Укажите IPv4 адрес)
 4. В проекте в файле conftest.py установите значение command_executor='http://"IPv4 Address":4723/wd/hub'

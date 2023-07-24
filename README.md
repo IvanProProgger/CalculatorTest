@@ -19,4 +19,4 @@
 1. Включите режим разработчика в Windows:
 https://remontka.pro/developer-mode-enable-windows-10/ - для windows 10
 2. Запустите winappdriver (дефолтный путь: C:\Program Files (x86)\Windows Application Driver)
-3. Введите в терминал: pytest или pytest test_calculator_functions.py 
+3. Перейдите в папку с проектом и введите в терминал: pytest или pytest test_calculator_functions.py 

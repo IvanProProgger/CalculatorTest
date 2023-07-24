@@ -4,3 +4,4 @@ xxxxxx.py
 __pycache__/
 **/__pycache__
 *.pyc
+.gitignore

@@ -37,3 +37,7 @@ netsh advfirewall firewall add rule name="WinAppDriver remote" dir=in action=all
 - cd C:\Program Files (x86)\Windows Application Driver\ (дефолтный путь)
 - WinAppDriver.exe "IPv4 Address" 4723/wd/hub (Укажите IPv4 адрес)
 4. В проекте в файле conftest.py установите значение command_executor='http://"IPv4 Address":4723/wd/hub'
+
+Для запуска Docker контейнера:
+1. docker build . -t docker-calc (собираем контейнер с именем docker-calc)      
+2. docker run -p 4723:4723 docker-calc (запускаем контейнер)

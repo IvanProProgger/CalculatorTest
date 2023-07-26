@@ -39,7 +39,7 @@ def test_engineer_page_factorial(driver):
 
 def test_speed_page_convert(driver):
     page = MainPage(driver)
-    page.clear_button_empty().click()
+    page.clear_button_with_text().click()
     page.go_to_speed_page()
     speed_page = SpeedPage(driver)
     speed_page.change_unit1_to_km_hour()

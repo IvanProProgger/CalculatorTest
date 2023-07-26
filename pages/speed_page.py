@@ -1,5 +1,5 @@
 from .base_page import BasePage
-from .constants import AssertConstant
+from ..constants.const import AssertConstant
 
 
 class SpeedPage(BasePage):
